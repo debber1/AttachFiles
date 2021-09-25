@@ -1,0 +1,25 @@
+{
+    "name": "AttachFiles",
+    "author": "ULYSSIS VZW, by Joachim Vandersmissen",
+    "url": "https://github.com/ULYSSIS-KUL/AttachFiles/",
+    "description": "Allows users to attach files to wiki pages",
+    "version": "1.0.0",
+    "license-name": "GPL-2.0+",
+    "type": "other",
+    "Hooks": {
+        "LoadExtensionSchemaUpdates": "AttachFiles::onLoadExtensionSchemaUpdates",
+        "BeforePageDisplay": "AttachFiles::onBeforePageDisplay",
+        "ContentAlterParserOutput": "AttachFiles::onContentAlterParserOutput",
+        "UploadComplete": "AttachFiles::onUploadComplete",
+        "FileDeleteComplete": "AttachFiles::onFileDeleteComplete",
+        "ArticleDeleteComplete": "AttachFiles::onArticleDeleteComplete",
+        "PageMoveCompleting": "AttachFiles::onPageMoveCompleting"
+    },
+    "AutoloadClasses": {
+        "AttachFiles": "AttachFiles.php"
+    },
+    "MessagesDirs": {
+        "AttachFiles": ["i18n"]
+    },
+    "manifest_version": 1
+}
