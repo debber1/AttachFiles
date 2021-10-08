@@ -1,5 +1,5 @@
 # AttachFiles
-This extension allows users to upload and attach files directly to pages, without going through the default MediaWiki upload process.
+This extension allows users to upload and attach files directly to pages, without going through the default MediaWiki upload process. Made for ULYSSIS VZW by Joachim Vandersmissen.
 
 ## Features
 * Very user-friendly UI.
