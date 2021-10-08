@@ -113,12 +113,12 @@ class AttachFiles {
 
         var maxUploadSize = $maxUploadSize;
         var file = document.getElementById("attachfiles_file").files[0];
-/*        if (file.size > maxUploadSize) {
+        if (file.size > maxUploadSize) {
             maxUploadSize = "$maxUploadSizeNice";
             alert(`$uploadFileSizeError`);
             uploadButton.disabled = false;
             return;
-        } */
+        }
 
         var fileExtension = file.name.substring(file.name.lastIndexOf("."));
         var displayName = document.getElementById("attachfiles_name").value;
@@ -140,7 +140,6 @@ class AttachFiles {
             contentType: "multipart/form-data",
             timeout: 0
         }).then(function(result) {
-            // This will probably never happen.
             if (!result.upload.warnings) {
                 form.reset();
                 window.location.reload();
@@ -214,6 +213,14 @@ class AttachFiles {
         ul.appendChild(li);
     }
 EOD;
+    }
+
+    public static function onAPIGetAllowedParams($module, &$params, $flags) {
+        if ($module instanceof ApiMain) {
+            $params["attachfiles_id"] = [ApiBase::PARAM_TYPE => "integer"];
+            $params["attachfiles_displayname"] = [ApiBase::PARAM_TYPE => "string"];
+            $params["attachfiles_namespace"] = [ApiBase::PARAM_TYPE => "integer"];
+        }
     }
 
     public static function onLoadExtensionSchemaUpdates($updater) {

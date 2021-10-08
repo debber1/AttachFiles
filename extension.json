@@ -7,6 +7,7 @@
     "license-name": "GPL-2.0+",
     "type": "other",
     "Hooks": {
+        "APIGetAllowedParams": "AttachFiles::onAPIGetAllowedParams",
         "LoadExtensionSchemaUpdates": "AttachFiles::onLoadExtensionSchemaUpdates",
         "BeforePageDisplay": "AttachFiles::onBeforePageDisplay",
         "ContentAlterParserOutput": "AttachFiles::onContentAlterParserOutput",
