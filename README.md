@@ -27,5 +27,8 @@ As usual, configuration options can be added to `LocalSettings.php` using global
 | --- | --- | --- | --- |
 | `$wgAFIgnoredPages` | `String[]` | `[]` | An array of pages which should be ignored by the extension (i.e. no table of attached files and no upload form is added). For example, ignore your main page by setting `$wgAFIgnoredPages[] = "Main Page";` in `LocalSettings.php` |
 
+### Translations
+Translations can be found in the `i18n` folder. Dutch (`nl.json`) and English (`en.json`) translations are already provided. Even the provided translations can be customized, and we strongly advise you to do so, in order to match them with your wiki situation.
+
 ## Tips
 * Check out [CompressUploads](https://github.com/ULYSSIS-KUL/CompressUploads) to reduce the amount of disk space used by your MediaWiki uploads.
