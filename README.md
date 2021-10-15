@@ -7,8 +7,11 @@ This extension allows users to upload and attach files directly to pages, withou
 * Sort by name, file type, upload date, and uploader.
 * Upload and delete files directly on an article page.
 * Support for MediaWiki `upload` and `delete` permissions.
-* Multiple files with the same name are supported (attached to different pages)
-* Works with other extension such as [CompressUploads](https://github.com/ULYSSIS-KUL/CompressUploads).
+* Multiple files with the same name are supported (attached to different pages).
+* Files uploaded using AttachFiles are stored using the default MediaWiki upload system: all files can be managed using the default MediaWiki interface and uploaded files are internally linked to the correct page. In particular, AttachFiles works seamlessly with the MediaWiki protection system.
+* Works with other extensions such as [CompressUploads](https://github.com/ULYSSIS-KUL/CompressUploads).
+
+![screenshot](screenshot.png)
 
 ## Installation
 * Download [the latest release](https://github.com/ULYSSIS-KUL/AttachFiles/releases/latest/download/AttachFiles.zip), and put the `AttachFiles` folder in the `extensions` directory.
@@ -29,6 +32,8 @@ As usual, configuration options can be added to `LocalSettings.php` using global
 
 ### Translations
 Translations can be found in the `i18n` folder. Dutch (`nl.json`) and English (`en.json`) translations are already provided. Even the provided translations can be customized, and we strongly advise you to do so, in order to match them with your wiki situation.
+
+Contributions (through PRs) are always welcome!
 
 ## Tips
 * Check out [CompressUploads](https://github.com/ULYSSIS-KUL/CompressUploads) to reduce the amount of disk space used by your MediaWiki uploads.
