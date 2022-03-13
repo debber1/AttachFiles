@@ -13,19 +13,10 @@ This extension allows users to upload and attach files directly to pages, withou
 
 ![screenshot](screenshot.png)
 
-## Installation
-* Download [the latest release](https://github.com/ULYSSIS-KUL/AttachFiles/releases/latest/download/AttachFiles.zip), and put the `AttachFiles` folder in the `extensions` directory.
-* Add the following to `LocalSettings.php`:
-```
-wfLoadExtension( 'AttachFiles' );
-```
-* Change the following setting in `LocalSettings.php` from false to true:
+## Prerequisites
+* Uploads need to be enabled. To do this, change the following setting in `LocalSettings.php` from false to true:
 ```
 $wgEnableUploads = false; ==> $wgEnableUploads = true;
-```
-* Run the maintenance update script to update the database. Go to your wiki directory (containing the `LocalSettings.php` file) and execute the following command:
-```
-php maintenance/update.php
 ```
 * If you want to allow general documents such as `.pdf` or `.docx`, add the folowing settings to `LocalSettings.php`:
 ```
@@ -33,6 +24,18 @@ $wgFileExtensions = array( 'png', 'gif', 'jpg', 'jpeg', 'doc',
     'xls', 'mpp', 'pdf', 'ppt', 'tiff', 'bmp', 'docx', 'xlsx',
     'pptx', 'ps', 'odt', 'ods', 'odp', 'odg'
 );
+```
+More information about upload permissions, settings and configuration is available on the official [MediaWiki documentation](https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads#Configuring_file_types).
+
+## Installation
+* Download [the latest release](https://github.com/ULYSSIS-KUL/AttachFiles/releases/latest/download/AttachFiles.zip), and put the `AttachFiles` folder in the `extensions` directory.
+* Add the following to `LocalSettings.php`:
+```
+wfLoadExtension( 'AttachFiles' );
+```
+* Run the maintenance update script to update the database. Go to your wiki directory (containing the `LocalSettings.php` file) and execute the following command:
+```
+php maintenance/update.php
 ```
 
 ## Configuration
